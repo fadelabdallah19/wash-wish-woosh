@@ -23,6 +23,51 @@ foreach ($dirs as $dir) {
     }
 }
 
+// Serve static files
+$requestUri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+
+$mimeTypes = [
+    'css'  => 'text/css; charset=utf-8',
+    'js'   => 'application/javascript; charset=utf-8',
+    'mjs'  => 'application/javascript; charset=utf-8',
+    'json' => 'application/json; charset=utf-8',
+    'png'  => 'image/png',
+    'jpg'  => 'image/jpeg',
+    'jpeg' => 'image/jpeg',
+    'gif'  => 'image/gif',
+    'svg'  => 'image/svg+xml',
+    'ico'  => 'image/x-icon',
+    'woff' => 'font/woff',
+    'woff2'=> 'font/woff2',
+    'ttf'  => 'font/ttf',
+    'webp' => 'image/webp',
+];
+
+if ($requestUri !== '/' && $requestUri !== false) {
+    $ext = strtolower(pathinfo($requestUri, PATHINFO_EXTENSION));
+
+    if (isset($mimeTypes[$ext])) {
+        $staticFile = $basePath . '/public' . $requestUri;
+        $altFile = $basePath . $requestUri;
+
+        $file = null;
+        if (is_file($staticFile)) {
+            $file = $staticFile;
+        } elseif (is_file($altFile)) {
+            $file = $altFile;
+        }
+
+        if ($file !== null) {
+            http_response_code(200);
+            header('Content-Type: ' . $mimeTypes[$ext]);
+            header('Cache-Control: public, max-age=31536000, immutable');
+            header('Access-Control-Allow-Origin: *');
+            echo file_get_contents($file);
+            exit;
+        }
+    }
+}
+
 // Maintenance mode
 if (file_exists($maintenance = $basePath . '/storage/framework/maintenance.php')) {
     require $maintenance;
