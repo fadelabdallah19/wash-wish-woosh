@@ -32,12 +32,17 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
+    "APP_KEY": "base64:Vyv5aTovA4ljbk3aYhHcuyUQwOELOxQTtICIqNTxqQI=",
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "APP_CONFIG_CACHE": "/tmp/storage/framework/cache/config.php",
     "APP_EVENTS_CACHE": "/tmp/storage/framework/cache/events.php",
     "APP_PACKAGES_CACHE": "/tmp/storage/framework/cache/packages.php",
     "APP_ROUTES_CACHE": "/tmp/storage/framework/cache/routes.php",
     "APP_SERVICES_CACHE": "/tmp/storage/framework/cache/services.php",
-    "LOG_CHANNEL": "stderr"
+    "LOG_CHANNEL": "stderr",
+    "SESSION_DRIVER": "array",
+    "CACHE_STORE": "array",
+    "ADMIN_USERNAME": "admin",
+    "ADMIN_PASSWORD": "$2y$12$Hju/t9jFdjbEOQmVcJtkDuggh.8jiguqb35Y2dgODHRQdEDTYLUZS"
   }
 }
