@@ -42,6 +42,8 @@
     "LOG_CHANNEL": "stderr",
     "SESSION_DRIVER": "array",
     "CACHE_STORE": "array",
+    "DB_CONNECTION": "sqlite",
+    "DB_DATABASE": "/tmp/database/database.sqlite",
     "ADMIN_USERNAME": "admin",
     "ADMIN_PASSWORD": "$2y$12$Hju/t9jFdjbEOQmVcJtkDuggh.8jiguqb35Y2dgODHRQdEDTYLUZS"
   }
