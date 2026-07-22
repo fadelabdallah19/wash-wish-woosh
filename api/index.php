@@ -44,11 +44,12 @@ $mimeTypes = [
 ];
 
 if ($requestUri !== '/' && $requestUri !== false) {
-    $ext = strtolower(pathinfo($requestUri, PATHINFO_EXTENSION));
+    $decodedUri = urldecode($requestUri);
+    $ext = strtolower(pathinfo($decodedUri, PATHINFO_EXTENSION));
 
     if (isset($mimeTypes[$ext])) {
-        $staticFile = $basePath . '/public' . $requestUri;
-        $altFile = $basePath . $requestUri;
+        $staticFile = $basePath . '/public' . $decodedUri;
+        $altFile = $basePath . $decodedUri;
 
         $file = null;
         if (is_file($staticFile)) {
