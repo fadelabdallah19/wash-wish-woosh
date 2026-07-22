@@ -1,6 +1,5 @@
 node_modules
 .git
-vendor
 storage/logs/*
 tests
 storage/framework/*

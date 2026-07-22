@@ -38,7 +38,7 @@
     <div class="grid grid-cols-3 gap-7 max-md:grid-cols-1">
         @foreach($services as $slug => $service)
             <article class="overflow-hidden bg-white border border-line rounded-lg shadow-[0_18px_45px_rgba(21,35,48,.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_58px_rgba(21,35,48,.12)]">
-                <img class="h-[235px] object-cover bg-[#d8eef8] max-[640px]:h-[210px]" src="{{ asset($service['image']) }}" alt="{{ $service['image_alt'] }}" loading="lazy">
+                <img class="w-full h-[235px] object-cover bg-[#d8eef8] max-[640px]:h-[210px]" src="{{ asset($service['image']) }}" alt="{{ $service['image_alt'] }}" loading="lazy">
                 <div class="p-7">
                     <h3 class="text-[22px] mb-3">{{ $service['title'] }}</h3>
                     <p class="text-muted leading-[1.7] mb-[18px]">{{ $service['description'] }}</p>

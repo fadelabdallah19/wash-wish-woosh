@@ -25,7 +25,7 @@
     <div class="grid grid-cols-3 gap-[18px] max-[1060px]:grid-cols-2 max-[640px]:grid-cols-1">
         @foreach(App\Models\Service::all() as $service)
             <figure class="overflow-hidden relative min-h-[260px] rounded-lg bg-[#d8eef8] shadow-[0_18px_45px_rgba(21,35,48,.08)]">
-                <img class="h-full min-h-[260px] object-cover" src="{{ asset($service['image']) }}" alt="{{ $service['image_alt'] }}" loading="lazy">
+                <img class="w-full h-full min-h-[260px] object-cover" src="{{ asset($service['image']) }}" alt="{{ $service['image_alt'] }}" loading="lazy">
                 <figcaption class="absolute left-[14px] right-[14px] bottom-[14px] py-3 px-[14px] text-white bg-[rgba(16,24,32,.78)] rounded-lg font-extrabold">{{ $service['eyebrow'] }}</figcaption>
             </figure>
         @endforeach
