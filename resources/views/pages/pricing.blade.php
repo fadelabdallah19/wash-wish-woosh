@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="overflow-hidden rounded-lg border border-line shadow-[0_28px_70px_rgba(21,35,48,.14)]">
-        <img class="h-[430px] object-cover max-md:h-[320px] max-[640px]:h-[260px]" src="{{ asset('assets/images/layanan/cuci mobil.jpg') }}" alt="Harga layanan cuci mobil" loading="lazy">
+        <img class="h-[430px] object-cover max-md:h-[320px] max-[640px]:h-[260px]" src="{{ asset('assets/images/layanan/cuci-mobil.jpg') }}" alt="Harga layanan cuci mobil" loading="lazy">
     </div>
 </section>
 

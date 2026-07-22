@@ -11,7 +11,7 @@ class Service
                 'title' => 'Cuci Mobil Interior & Eksterior',
                 'eyebrow' => 'Cuci Interior & Eksterior',
                 'description' => 'Paket cuci mobil lengkap untuk membersihkan bagian luar dan kabin ringan agar mobil kembali segar tanpa perlu antre.',
-                'image' => 'assets/images/layanan/cuci mobil.jpg',
+                'image' => 'assets/images/layanan/cuci-mobil.jpg',
                 'image_alt' => 'Cuci mobil panggilan',
                 'features' => [
                     'Pembersihan body mobil menggunakan sampo aman untuk cat.',
