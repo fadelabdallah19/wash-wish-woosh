@@ -65,12 +65,12 @@ img { display: block; }
 /* Hero background (home) */
 .hero-home {
   background: linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.86) 44%, rgba(255,255,255,.16)),
-              url('/assets/images/layanan/cuci%20mobil.jpg') center right / cover no-repeat;
+              url('/assets/images/layanan/cuci-mobil.jpg') center right / cover no-repeat;
 }
 @media (max-width: 860px) {
   .hero-home {
     background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.9) 52%, rgba(255,255,255,.58)),
-                url('/assets/images/layanan/cuci%20mobil.jpg') center bottom / cover no-repeat;
+                url('/assets/images/layanan/cuci-mobil.jpg') center bottom / cover no-repeat;
   }
 }
 
